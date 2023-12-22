@@ -1,0 +1,9 @@
+{
+  "name": "ruby",
+  "image": "mcr.microsoft.com/devcontainers/ruby:0-3.1",
+  "forwardPorts": [3000],
+   "extensions": [
+      "rebornix.ruby",
+      "rebornix.ruby-rubocop"
+   ],
+}
