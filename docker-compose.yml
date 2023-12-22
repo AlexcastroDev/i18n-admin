@@ -1,19 +1,6 @@
 version: '3.8'
 
 services:
-  api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    environment:
-      DATABASE_URL: postgres://your_database_user:your_database_password@db:5432/your_database_name
-    depends_on:
-      - db
-    networks:
-      - your_network_name
-
   db:
     image: postgres:latest
     environment:
