@@ -2,11 +2,22 @@
   "name": "Rails",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
-  "features": {
-    "ghcr.io/shyim/devcontainers-features/bun:0": {}
-  },
   "workspaceFolder": "/workspace",
   "remoteEnv": {
     "GIT_EDITOR": "code --wait"
+  },
+  "forwardPorts": [
+    3000,
+    5432,
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "web",
+      "onAutoForward": "notify",
+      "requireLocalPort": true
+    },
+    "5432": {
+      "label": "postgres"
+    }
   }
 }
