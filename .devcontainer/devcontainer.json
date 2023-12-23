@@ -8,7 +8,7 @@
   },
   "forwardPorts": [
     3000,
-    5432,
+    5432
   ],
   "portsAttributes": {
     "3000": {
@@ -18,6 +18,18 @@
     },
     "5432": {
       "label": "postgres"
+    }
+  },
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "KoichiSasada.vscode-rdbg",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "GitHub.github-vscode-theme"
+      ]
     }
   }
 }
