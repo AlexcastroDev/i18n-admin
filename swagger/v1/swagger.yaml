@@ -1,0 +1,19 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/version":
+    get:
+      summary: Returns api version
+      tags:
+      - Api
+      responses:
+        '200':
+          description: Should return the API Version
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: 0.0.0.0:3000
