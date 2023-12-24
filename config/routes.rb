@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   namespace :api do
+    resource 'languages'
     get :version, to: "version#index"
   end
 end

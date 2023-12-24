@@ -15,3 +15,9 @@ bundle
 ```bash
 rake rswag:specs:swaggerize
 ```
+
+# Run tests
+
+```bash
+rake spec
+```
