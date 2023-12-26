@@ -12,5 +12,6 @@ VCR.configure do |config|
     :record => :once,
     :match_requests_on => [:method, :host, :path],
   }
+
   config.debug_logger = File.open("tmp/vcr.log", "w")
 end

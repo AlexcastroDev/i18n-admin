@@ -13,6 +13,8 @@ describe Api::VersionController, vcr: true do
         # VCR.use_cassette('Api::VersionController//api/version/get/Should return the API Version/returns a 200 respons') do
         #   Net::HTTP.get_response('rnters-staging.herokuapp.com', '/api/item_categories').body
         # end
+        a = VCR
+        b = VCR.current_cassette
         body = JSON.parse(response.body)
         expect(body['version']).to eq('1.0.0')
       end
