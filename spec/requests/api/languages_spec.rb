@@ -1,13 +1,13 @@
-require 'rails_helper'
+require 'swagger_helper'
 
-describe "Api::LanguagesController", type: :request, vrc: true do
+describe "Api::LanguagesController", :vcr do
   path '/api/languages' do
     get 'Get Languages' do
       tags 'Languages'
       produces 'application/json'
       consumes 'application/json'
 
-      response '200', 'Should list all language', focus: true do
+      response '200', 'Should list all language' do
         let!(:language) { FactoryBot.create(:language) }
 
         run_test! do |response|

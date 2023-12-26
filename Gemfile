@@ -40,12 +40,11 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 
   # Testing Tools
-  gem "rspec-rails"
-  gem 'rswag-specs'
-  gem 'rspec-core'
-  gem 'rswag-api'
-  gem 'rswag-ui'
-  gem 'vcr'
+  gem "rspec-rails", '6.1.0'
+  gem 'rswag-specs', '2.13.0'
+  gem 'rswag-api', '2.13.0'
+  gem 'rswag-ui', '2.13.0'
+  gem 'vcr', '6.2.0'
   gem 'webmock'
   gem 'factory_bot_rails', '~> 6.4'
 

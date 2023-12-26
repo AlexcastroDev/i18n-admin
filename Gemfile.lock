@@ -262,13 +262,12 @@ DEPENDENCIES
   pry
   puma (>= 5.0)
   rails (~> 7.1.2)
-  rspec-core
-  rspec-rails
-  rswag-api
-  rswag-specs
-  rswag-ui
+  rspec-rails (= 6.1.0)
+  rswag-api (= 2.13.0)
+  rswag-specs (= 2.13.0)
+  rswag-ui (= 2.13.0)
   tzinfo-data
-  vcr
+  vcr (= 6.2.0)
   webmock
 
 RUBY VERSION
