@@ -5,12 +5,10 @@ class Api::LanguagesController < ApplicationController
 
   def show
     @languages = Language.all
-
-    render_results(@language)
+    render_results(@languages)
   end
 
   def create
-    binding.pry
     @language = Language.new(language_params)
     if @language.save
       render json: @language, status: :created

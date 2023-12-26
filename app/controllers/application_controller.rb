@@ -6,7 +6,7 @@ class ApplicationController < ActionController::API
   end
 
   def render_results(model)
-    if model
+    if model.present?
       render json: model, status: :ok
     else
       render json: [], status: :ok

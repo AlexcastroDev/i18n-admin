@@ -7,15 +7,13 @@ describe "Api::LanguagesController", type: :request, vrc: true do
       produces 'application/json'
       consumes 'application/json'
 
-
       response '200', 'Should list all language', focus: true do
-        let(:language) { FactoryBot.create(:language) }
+        let!(:language) { FactoryBot.create(:language) }
 
         run_test! do |response|
-          binding.pry
           body = JSON.parse(response.body)
           expect(body.count).to eq(1)
-          expect(body.dig(0, 'key')).to eq('en-GB')
+          expect(body.dig(0, 'key')).to eq('en_GB')
         end
       end
     end
