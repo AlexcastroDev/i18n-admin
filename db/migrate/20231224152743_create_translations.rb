@@ -16,6 +16,6 @@ class CreateTranslations < ActiveRecord::Migration[7.1]
 
   def down
     drop_table :languages
-    drop_table :languages
+    drop_table :translations
   end
 end
