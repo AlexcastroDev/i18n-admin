@@ -31,7 +31,17 @@ RSpec.configure do |config|
             }
           }
         }
-      ]
+      ],
+      definitions: {
+        createLanguage: {
+          type: :object,
+          properties: {
+            key: { type: :string},
+            label: { type: :string}
+          },
+          required: ['key', 'label']
+        }
+      }
     }
   }
 
